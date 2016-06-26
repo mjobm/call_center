@@ -1,43 +1,19 @@
-# Heroku Django Starter Template
+# TDD pytest Starter Template
 
-An utterly fantastic project starter template for Django 1.9.
+An utterly fantastic tdd starter project template for Django 1.9.
 
-## Features
+## Pre configured
 
-- Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
-- Enhancements to Django's static file serving functionality via WhiteNoise
+- requirements frozen to their irrespective txt file.
 
 ## How to Use
 
 To use this project, follow these steps:
 
 1. Create your working environment.
-2. Install Django (`$ pip install django`)
-3. Create a new project using this template
+2. Clone this repository
+2. Install requirements `pip install -r requirements.txt`
+4. rename the app `sample_app` and project `tdd_template`,
+   to a desired name, then change the root project name to match with it's sub-directory project folder i.e. rename both `tdd_template` to the same desired name.
 
-## Creating Your Project
-
-Using this template to create a new Django app is easy::
-
-    $ django-admin.py startproject --template=https://github.com/heroku/heroku-django-template/archive/master.zip --name=Procfile helloworld
-
-You can replace ``helloworld`` with your desired project name.
-
-## Deployment to Heroku
-
-    $ git init
-    $ git add -A
-    $ git commit -m "Initial commit"
-
-    $ heroku create
-    $ git push heroku master
-
-    $ heroku run python manage.py migrate
-
-See also, a [ready-made application](https://github.com/heroku/python-getting-started), ready to deploy.
-
-## Further Reading
-
-- [Gunicorn](https://warehouse.python.org/project/gunicorn/)
-- [WhiteNoise](https://warehouse.python.org/project/whitenoise/)
-- [dj-database-url](https://warehouse.python.org/project/dj-database-url/)
+enjoy, feel free to make an even better template.
