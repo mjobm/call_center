@@ -1,5 +1,5 @@
 """
-Django settings for tdd_template project on Heroku. Fore more info, see:
+Django settings for call_center project on Heroku. Fore more info, see:
 https://github.com/heroku/heroku-django-template
 
 For more information on this file, see
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'tdd_template.wsgi.application'
+WSGI_APPLICATION = 'call_center.wsgi.application'
 
 
 # Database
