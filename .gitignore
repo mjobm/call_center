@@ -3,6 +3,10 @@ tdd_env/
 *.pyo
 /__pycache__/
 /.idea
-.DS_Store
 db.sqlite3
-
+.cache/
+call_center/__pycache__/
+call_center_scheduler/tests/__pycache__/
+.DS_Store
+env/
+migrations
