@@ -3,3 +3,4 @@ tdd_env/
 *.pyo
 /__pycache__/
 /.idea
+.DS_Store
