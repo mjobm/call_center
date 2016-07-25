@@ -4,3 +4,6 @@ tdd_env/
 /__pycache__/
 /.idea
 db.sqlite3
+.cache/
+call_center/__pycache__/
+call_center_scheduler/tests/__pycache__/
