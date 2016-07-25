@@ -1,122 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<title>Busara Call Center Schedular</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Busara Center Inventory</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-    <!-- Custom CSS -->
-    <link href="{{STATIC_URL }}/css/custom.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-    <style type="text/css">
-        body {
-            padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-        }
-
-        footer {
-            margin: 50px 0;
-        }
-    </style>
-
-    <script>
-        $( function() {
-            $( ".datepicker" ).datepicker();
-        });
-  </script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 </head>
-
+</html>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">Busara Center Inventory</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li><a href="/request_item/">Request Item</a></li>
-                </ul>
-                <ul class="nav navbar-nav pull-right">
-                    {% if request.user.is_authenticated %}
-                        {% if request.user.is_staff %}<!--only allow users with staff status-->
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Admin Dashboard <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-header">Items</li>
-                                <li><a href="/item_create/">Add Item</a></li>
-                                <li><a href="{% url "item:upload_items" %}">Upload Items - CSV</a></li>
-                                <li><a href="{% url "item:download_items" %}">Download Items - CSV</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Users</li>
-                                <li><a href="{% url "item:upload_users" %}">Upload Users</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Borrowed Items</li>
-                                <li><a href="{% url "item:borrowed_items" %}">All borrowed</a></li>
-                                <li role="separotor" class="divider"></li>
-                                <li class="dropdown-header">Logs</li>
-                                <li><a href="/audit/">Check Logs</a></li>
-                            </ul>
-                        </li>
-                        {% endif %}
-                        <li>
-                            <a href="{% url 'logout' %}">logout</a>
-                        </li>
-                    {% else %}
-                        <li>
-                            <a href="{% url 'login' %}">Login</a>
-                        </li>
-                    {% endif %}
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    {% block content%}
 
-    <!-- Page Content -->
-    <div class="container">
+    {% endblock %}
 
-        <div class="row">
-
-            <div class="col-md-12">
-
-                {% block content %}
-                {% endblock content %}
-
-            </div>
-
-        </div>
-
-    </div>
 </body>
-
-</html>

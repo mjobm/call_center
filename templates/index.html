@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Busara Center Call Center Schedule</a>
+        </div>
+        <nav class="collapse navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+              <li><a href="/request/">Book Space</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="/accounts/login/"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
+
+          </ul>
+        </nav>
+      </div>
+    </nav>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+
+<div class="col-md-4 col-md-offset-4">
+<div class="panel panel-success">
+  <div class="panel-body">
+
+    <form class="form-signin form-group" method="post" action="/accounts/login/"><input type='hidden' name='csrfmiddlewaretoken' value='9mPzuRDCM9Ww5kksWaGV20MxeHFkxOlV' />
+        <h2 class="form-signin-heading">User login</h2>
+        <label class="sr-only">Username</label>
+        <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
+        <p>&nbsp;</p>
+        <label class="sr-only">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+        <p>&nbsp;</p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      </form>
+  </div>
+</div>
+</div>
+{% endblock %}
