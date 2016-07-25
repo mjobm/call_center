@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Request(models.Model):
     project_name = models.CharField(max_length=100)
-    number_of_slots = models.IntegerField()
+    number_of_slots = models.CharField()
     date_from = models.DateField(auto_now_add=True)
     date_to = models.DateField()
     email = models.EmailField()
