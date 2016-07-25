@@ -21,3 +21,6 @@ class HomePageView(DefaultMixin, TemplateView):
 class RequestSlotView(DefaultMixin, CreateView):
     pass
 
+
+class CreateComputerSlot(DefaultMixin, CreateView):
+    pass

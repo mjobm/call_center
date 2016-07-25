@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Request(models.Model):
     project_name = models.CharField(max_length=100)
-    number_of_slots = models.CharField()
+    number_of_slots = models.CharField(max_length=100)
     date_from = models.DateField(auto_now_add=True)
     date_to = models.DateField()
     email = models.EmailField()
@@ -15,8 +15,8 @@ class Request(models.Model):
 
 
 class Computer(models.Model):
-    label = models.CharField(max_length=100)
-    serial_number = models.CharField(max_length=100)
+    label = models.CharField(verbose_name="Label", max_length=100)
+    serial_number = models.CharField(verbose_name="Serial Number", max_length=100)
 
 
 class Booker(models.Model):
