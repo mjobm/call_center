@@ -1,1 +1,1 @@
-web: gunicorn tdd_template.wsgi
+web: gunicorn call_center.wsgi
