@@ -1,19 +1,20 @@
-# TDD pytest Starter Template
+# Busara Center Call Center Application
 
-An utterly fantastic tdd starter project template for Django 1.9.
+This application is used to monitor the usage of the call center and availability of different,
+slots available or otherwise occupied for the purposes of clarity for different PLS.
 
 ## Pre configured
 
-- requirements frozen to their irrespective txt file.
+- requirements frozen to their respective txt files.
 
 ## How to Use
 
-To use this project, follow these steps:
+To use this repository, follow these steps:
 
-1. Create your working environment.
-2. Clone this repository
-2. Install requirements `pip install -r requirements.txt`
-4. rename the app `sample_app` and project `tdd_template`,
-   to a desired name, then change the root project name to match with it's sub-directory project folder i.e. rename both `tdd_template` to the same desired name.
-
-enjoy, feel free to make an even better template.
+1. Create your working environment, i.e that is your virtual env.
+2. activate virtual environment.
+3. Clone this repository.
+4. Install requirements `pip install -r requirements.txt`
+5. `python manage.py makemigration`
+6. `python manage.py migrate`
+7. `python manage.py runsever`
