@@ -9,3 +9,4 @@ call_center/__pycache__/
 call_center_scheduler/tests/__pycache__/
 .DS_Store
 env/
+migrations
