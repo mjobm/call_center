@@ -2,3 +2,5 @@ tdd_env/
 *.pyc
 *.pyo
 /__pycache__/
+
+.idea/
