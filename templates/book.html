@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Busara Center Lab Schedule</a>
+        </div>
+        <nav class="collapse navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+              <li><a href="/request/">Book Session</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="/accounts/login/"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
+
+          </ul>
+        </nav>
+      </div>
+    </nav>
+    <div class="container">
+        <div class="container">
+             <div class="content">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="panel panel-info">
+                      <div class="panel-body">
+                        <form role="form" action="" method="post" >
+                            <input type='hidden' name='csrfmiddlewaretoken' value='uancGYQivda2ywDef1SH1y1mzfpDxcq2' />
+                            <p>
+                                <label for="name">Name:</label>
+                                <input class="textinput form-control" id="id_name" maxlength="255" name="item_name" type="text" />
+                            </p>
+                            <p>
+                                <label for="project">Project:</label>
+                                <input class="textinput form-control" id="id_project" maxlength="255" name="number_of_items" type="text" />
+                            </p>
+                            <p>
+                                <label for="id_your_email">No. of Slots:</label>
+                                <input class="textinput form-control" id="id_your_email" maxlength="255" name="your_email" type="text" />
+                            </p>
+                            <p>
+                                <label for="id_duration">Duration:</label>
+                                <input class="textinput form-control" id="id_duration" maxlength="255" name="duration" type="text" />
+                            </p>
+                            <p>
+                                <label for="id_project">Email Address:</label>
+                                <input class="textinput form-control" id="id_project" maxlength="255" name="project" type="text" />
+                            </p>
+                            <p>
+                                <label for="id_notes">Notes:</label>
+                                <textarea class="textinput form-control" cols="40" id="id_notes" name="notes" rows="10"></textarea>
+                            </p>
+                            <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+                        </form>
+                      </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
