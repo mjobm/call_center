@@ -19,8 +19,10 @@ class HomePageView(DefaultMixin, TemplateView):
 
 
 class RequestSlotView(DefaultMixin, CreateView):
+    template_name = "book.html"
+
+
+class CreateComputerSlotView(DefaultMixin, CreateView):
     pass
 
 
-class CreateComputerSlot(DefaultMixin, CreateView):
-    pass

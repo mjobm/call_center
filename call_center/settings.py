@@ -132,4 +132,6 @@ STATICFILES_DIRS = (
 MEDIA_ROOT = "media"
 MEDIA_URL = "/media/"
 
+LOGIN_REDIRECT_URL = "/"
+
 # CRISPY_TEMPLATE_PACK = 'bootstrap3'
